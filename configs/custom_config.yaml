@@ -1,0 +1,19 @@
+
+# Dataset parameters
+dataset:
+  name: "math"
+  sample_size: 1000
+  seed: 42
+  file_path: null  # Optional, if null then use default path
+
+# Reward function weights
+reward:
+  calibrated_reward_weight: 1.0
+  reflection_reward_weight: 0.6
+
+# WandB parameters
+report_to: "wandb"
+wandb_project: "your/wandb/project"
+wandb_entity: "your/wandb/entity"
+run_name: "your/run/name"
+
