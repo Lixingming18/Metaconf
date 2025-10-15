@@ -19,24 +19,9 @@ MetaConf is a framework for learning explainable confidence in large language mo
 
 - 🔍 **Metacognitive Reflection**: Models perform first-person introspection to assess reasoning processes and knowledge boundaries
 - 📊 **Explainable Confidence**: Generate detailed confidence explanations rather than simple numerical scores
-- 🚀 **Two-Stage Training**: Supervised fine-tuning followed by GRPO reinforcement learning
 - ⚖️ **Multi-dimensional Rewards**: Calibration error, reflection quality, and accuracy optimization
 
 ![MetaConf Architecture](figures/Metaconf.png)
-
-## 🏗️ Architecture
-
-The framework consists of two main training stages:
-
-1. **🎓 Stage 1 - Supervised Fine-Tuning (SFT)**
-   - Uses LlamaFactory for supervised fine-tuning
-   - Trains models to generate answers with confidence scores and reflections
-   - Prepares foundation for reinforcement learning
-
-2. **🤖 Stage 2 - GRPO Reinforcement Learning**
-   - Implements Group Relative Policy Optimization
-   - Multi-dimensional reward function combining calibration, reflection quality, and accuracy
-   - Optimizes model behavior through reward-based learning
 
 ### 🔧 Core Components
 
@@ -68,7 +53,7 @@ export DEEPSEEK_BASE_URL="https://api.deepseek.com"
 
 ### 🎯 Training
 
-#### Stage 1: Supervised Fine-Tuning
+#### Stage 1: Explainable Confidence Modeling
 
 This initial stage fine-tunes the base model on a high-quality dataset of fact-based question-answering pairs. This pre-aligns the model, making the subsequent RL training more stable and effective. We use the [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework for this stage.
 
@@ -113,7 +98,7 @@ fp16: true
 ddp_timeout: 180000000
 ```
 
-#### Stage 2: GRPO Training
+#### Stage 2: Semantic Consistency Optimization
 
 ```bash
 # Run GRPO training
