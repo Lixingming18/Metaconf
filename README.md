@@ -22,7 +22,7 @@ MetaConf is a framework for learning explainable confidence in large language mo
 - 🚀 **Two-Stage Training**: Supervised fine-tuning followed by GRPO reinforcement learning
 - ⚖️ **Multi-dimensional Rewards**: Calibration error, reflection quality, and accuracy optimization
 
-![MetaConf Architecture](figures/Metaconf.jpg)
+![MetaConf Architecture](figures/Metaconf.png)
 
 ## 🏗️ Architecture
 
